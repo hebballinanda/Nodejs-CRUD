@@ -15,21 +15,21 @@
 
 ### 2. Generate an SSH Key
 
-Open a terminal (Command Prompt, PowerShell, or Git Bash on Windows). Run the following command:
+#### Open a terminal (Command Prompt, PowerShell, or Git Bash on Windows). Run the following command:
 
-bash
-Copy code
+```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-Replace your_email@example.com with your email. The -t option specifies the type (rsa), and -b sets the key length (4096 bits for strong encryption).
+```
+#### Replace your_email@example.com with your email. The -t option specifies the type (rsa), and -b sets the key length (4096 bits for strong encryption).
 
-You’ll be prompted to:
+- You’ll be prompted to:
+#### Enter a file location: Press Enter to save it in the default location (~/.ssh/id_rsa).
+#### Enter a passphrase (optional): This secures your key with a password.
+#### Once complete, your keys will be saved as:
 
-Enter a file location: Press Enter to save it in the default location (~/.ssh/id_rsa).
-Enter a passphrase (optional): This secures your key with a password.
-Once complete, your keys will be saved as:
+#### Private key: ~/.ssh/id_rsa
+#### Public key: ~/.ssh/id_rsa.pub
 
-Private key: ~/.ssh/id_rsa
-Public key: ~/.ssh/id_rsa.pub
 3. Add Your SSH Key to the SSH Agent
 Gitbash
 Start the SSH agent:
