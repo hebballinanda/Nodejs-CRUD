@@ -31,42 +31,40 @@ Once complete, your keys will be saved as:
 Private key: ~/.ssh/id_rsa
 Public key: ~/.ssh/id_rsa.pub
 ```
-3. Add Your SSH Key to the SSH Agent
-Gitbash
-Start the SSH agent:
+### 3. Add Your SSH Key to the SSH Agent
+#### Start the SSH agent:
 
-Linux/macOS:
-bash
-Copy code
+- Linux/macOS:
+```bash
 eval "$(ssh-agent -s)"
-Windows (Git Bash):
-bash
-Copy code
+```
+- Windows (Git Bash):
+```bash
 eval $(ssh-agent -s)
-Windows (Command Prompt/PowerShell):
-The agent is already running; no action needed.
+```
 
-Add your private key to the SSH agent:
+#### Add your private key to the SSH agent:
 
-bash
-Copy code
+```bash
 ssh-add ~/.ssh/id_rsa
-4. Add Your Public Key to Your GitHub Account
-Copy the contents of your public key:
+```
 
-bash
-Copy code
+### 4. Add Your Public Key to Your GitHub Account
+
+```bash
 cat ~/.ssh/id_rsa.pub
+```
 On Windows:
-
-cmd
-Copy code
+```bash
 type C:\Users\YourUsername\.ssh\id_rsa.pub
+```
+```bash
 Log in to your GitHub account.
-
 Go to Settings > SSH and GPG Keys > New SSH Key.
 Paste the copied key and give it a title.
 Save the key.
+```
+
 5. Test Your SSH Connection
 Run the following command to ensure the connection is working:
 
