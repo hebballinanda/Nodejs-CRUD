@@ -2,15 +2,17 @@
 ## SSH is preferred for Git operations because it's more secure and avoids the need for repeated authentication prompts
 
 ### 1. Check for an Existing .ssh Folder
-```bash
-  Linux/macOS
-  ls -a ~/.ssh
 
-  Windows:
-  mkdir C:\Users\YourUsername\.ssh
-  
-If the .ssh folder exists, check if it contains keys (id_rsa and id_rsa.pub files). If it doesn’t exist or you want to create a new key, continue.
+- Linux/macOS
+```bash
+  ls -a ~/.ssh
 ```
+- Windows
+```bash
+  mkdir C:\Users\YourUsername\.ssh 
+```
+#### If the .ssh folder exists, check if it contains keys (id_rsa and id_rsa.pub files). If it doesn’t exist or you want to create a new key, continue.
+
 ### 2. Generate an SSH Key
 
 Open a terminal (Command Prompt, PowerShell, or Git Bash on Windows). Run the following command:
