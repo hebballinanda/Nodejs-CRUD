@@ -65,56 +65,52 @@ Paste the copied key and give it a title.
 Save the key.
 ```
 
-5. Test Your SSH Connection
-Run the following command to ensure the connection is working:
+### 5. Test Your SSH Connection
+- Run the following command to ensure the connection is working:
 
-bash
-Copy code
+```bash
 ssh -T git@github.com
-You should see a message like:
 
-bash
-Copy code
 Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
-6. Set the Correct GitHub Username
-If you have multiple GitHub accounts, ensure the correct key is used. Update your SSH config file (~/.ssh/config):
+```
 
-bash
-Copy code
+### 6. Set the Correct GitHub Username
+- If you have multiple GitHub accounts, ensure the correct key is used. Update your SSH config file (~/.ssh/config):
+
+```bash
 # Personal Account
 Host github-personal
   HostName github.com
   User git
-  IdentityFile ~/.ssh/hebballinanda123
+  IdentityFile ~/.ssh/your_email@personal.com
 
 # Work Account
 Host github-work
   HostName github.com
   User git
-  IdentityFile ~/.ssh/nanda.h@test
-Test Your SSH Connection
-bash
-Copy code
+  IdentityFile ~/.ssh/your_email@work.com
+```
+
+- Test Your SSH Connection
+```bash
 $ ssh -T git@github-work
-Hi nandahebballi! You've successfully authenticated, but GitHub does not provide shell access.
+Hi Work user! You've successfully authenticated, but GitHub does not provide shell access.
 
 $ ssh -T git@github-personal
-Hi hebballinanda! You've successfully authenticated, but GitHub does not provide shell access.
-7. Set the SSH URL for Your Repository
-When cloning or pushing, use the SSH URL instead of HTTPS. Example:
+Hi Personal User ! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
-Clone a repo:
+### 7. Set the SSH URL for Your Repository
 
-bash
-Copy code
+- Clone a repo:
+
+```bash
 git clone git@github.com:your-username/your-repository.git
-Push code:
-
-bash
-Copy code
+```
+- Push to Repo:
+```bash
 git push origin branch-name
-Copy code
-
+```
 
 
 
