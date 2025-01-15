@@ -1,16 +1,14 @@
 # Nodejs-CRUD
 ## SSH is preferred for Git operations because it's more secure and avoids the need for repeated authentication prompts
 
-```bash
-1. Check for an Existing .ssh Folder
-Linux/macOS
-ls -a ~/.ssh
-Windows:
-Open PowerShell or Command Prompt.
+### 1. Check for an Existing .ssh Folder
+`` bash
+  Linux/macOS
+  ls -a ~/.ssh
 
-cmd
-Copy code
-mkdir C:\Users\YourUsername\.ssh
+  Windows:
+  mkdir C:\Users\YourUsername\.ssh
+  
 If the .ssh folder exists, check if it contains keys (id_rsa and id_rsa.pub files). If it doesn’t exist or you want to create a new key, continue.
 
 2. Generate an SSH Key
